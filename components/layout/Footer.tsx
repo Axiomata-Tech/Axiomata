@@ -92,9 +92,6 @@ export function Footer() {
         {/* Bottom Bar Separated by 2px Paper Rule */}
         <div className="pt-8 border-t-2 border-paper flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-xs text-muted-dark">
           <p>© 2026 Axiomata. All rights reserved.</p>
-          <p className="uppercase tracking-widest text-[11px]">
-            Restrained Neo-Brutalist Systems
-          </p>
         </div>
       </div>
     </footer>
