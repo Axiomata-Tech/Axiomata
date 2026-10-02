@@ -1,0 +1,218 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #1C1410;
+  --brown-900: #2E211A;
+  --brown-700: #5A4034;
+  --muted-light: #6B5242;
+  --muted-dark: #B9B2A8;
+  --gray-200: #E3E0DA;
+  --gray-300: #CFCBC4;
+  --paper: #F4F2EE;
+  --white: #FFFFFF;
+  --green: #0FA958;
+  --green-deep: #0B8A47;
+
+  --font-grotesk: var(--font-space-grotesk);
+  --font-inter: var(--font-inter);
+  --font-mono: var(--font-space-mono);
+}
+
+@theme {
+  --color-ink: var(--ink);
+  --color-brown-900: var(--brown-900);
+  --color-brown-700: var(--brown-700);
+  --color-muted-light: var(--muted-light);
+  --color-muted-dark: var(--muted-dark);
+  --color-gray-200: var(--gray-200);
+  --color-gray-300: var(--gray-300);
+  --color-paper: var(--paper);
+  --color-white: var(--white);
+  --color-green: var(--green);
+  --color-green-deep: var(--green-deep);
+
+  --font-heading: var(--font-space-grotesk), system-ui, sans-serif;
+  --font-body: var(--font-inter), system-ui, sans-serif;
+  --font-mono: var(--font-space-mono), monospace;
+
+  --shadow-hard-card: 6px 6px 0 0 var(--ink);
+  --shadow-hard-card-hover: 9px 9px 0 0 var(--ink);
+  --shadow-hard-btn: 4px 4px 0 0 var(--ink);
+  --shadow-hard-btn-hover: 7px 7px 0 0 var(--ink);
+  --shadow-hard-btn-active: 2px 2px 0 0 var(--ink);
+  --shadow-hard-dark: 6px 6px 0 0 var(--green);
+  --shadow-hard-paper: 6px 6px 0 0 var(--paper);
+  --shadow-hard-btn-paper: 4px 4px 0 0 var(--paper);
+}
+
+/* Base resets & selection */
+* {
+  border-color: var(--ink);
+  box-sizing: border-box;
+}
+
+::selection {
+  background: var(--green);
+  color: var(--ink);
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-inter), system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--paper);
+  color: var(--ink);
+  line-height: 1.6;
+  font-size: 17px;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-space-grotesk), system-ui, sans-serif;
+  font-weight: 700;
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  color: inherit;
+}
+
+/* Mono tags and eyebrows */
+.font-mono-meta {
+  font-family: var(--font-space-mono), monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.8125rem;
+}
+
+/* Focus styles */
+:focus-visible {
+  outline: 3px solid var(--ink) !important;
+  outline-offset: 3px !important;
+}
+
+.on-dark :focus-visible,
+[data-theme="dark"] :focus-visible {
+  outline: 3px solid var(--green) !important;
+  outline-offset: 3px !important;
+}
+
+/* Hard Neo-brutalist utility classes */
+.border-ink-2 {
+  border: 2px solid var(--ink);
+}
+
+.border-paper-2 {
+  border: 2px solid var(--paper);
+}
+
+.border-green-2 {
+  border: 2px solid var(--green);
+}
+
+.border-brown-700-2 {
+  border: 2px solid var(--brown-700);
+}
+
+.shadow-card-ink {
+  box-shadow: 6px 6px 0 0 var(--ink);
+}
+
+.shadow-card-green {
+  box-shadow: 6px 6px 0 0 var(--green);
+}
+
+.shadow-card-paper {
+  box-shadow: 6px 6px 0 0 var(--paper);
+}
+
+.shadow-btn-ink {
+  box-shadow: 4px 4px 0 0 var(--ink);
+}
+
+.shadow-btn-paper {
+  box-shadow: 4px 4px 0 0 var(--paper);
+}
+
+.shadow-btn-green {
+  box-shadow: 4px 4px 0 0 var(--green);
+}
+
+.card-interactive {
+  transition: transform 150ms ease-out, box-shadow 150ms ease-out;
+}
+
+.card-interactive:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 9px 9px 0 0 var(--ink);
+}
+
+.card-interactive:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0 0 0 0 var(--ink);
+}
+
+.btn-interactive {
+  transition: transform 150ms ease-out, box-shadow 150ms ease-out, background-color 150ms ease-out;
+}
+
+.btn-interactive:hover:not(:disabled) {
+  transform: translate(-3px, -3px);
+  box-shadow: 7px 7px 0 0 var(--ink);
+}
+
+.btn-interactive:active:not(:disabled) {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 0 var(--ink);
+}
+
+.btn-interactive-on-dark:hover:not(:disabled) {
+  transform: translate(-3px, -3px);
+  box-shadow: 7px 7px 0 0 var(--paper);
+}
+
+.btn-interactive-on-dark:active:not(:disabled) {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 0 var(--paper);
+}
+
+/* Subtle dot-grid pattern for hero background */
+.bg-dot-grid {
+  background-image: radial-gradient(var(--ink) 1px, transparent 1px);
+  background-size: 24px 24px;
+  opacity: 0.12;
+}
+
+/* Line patterns */
+.bg-fine-grid {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(28, 20, 16, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(28, 20, 16, 0.08) 1px, transparent 1px);
+}
+
+/* Reduced motion overrides */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .card-interactive:hover,
+  .card-interactive:active,
+  .btn-interactive:hover,
+  .btn-interactive:active,
+  .btn-interactive-on-dark:hover,
+  .btn-interactive-on-dark:active {
+    transform: none !important;
+  }
+}
