@@ -85,7 +85,7 @@ export function Button({
     const isInternal = href.startsWith("/") || href.startsWith("#");
     if (isInternal) {
       return (
-        <Link href={href} className={baseClasses}>
+        <Link href={href} prefetch={true} className={baseClasses}>
           {content}
         </Link>
       );

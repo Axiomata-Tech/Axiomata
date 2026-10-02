@@ -39,6 +39,7 @@ export function ProjectCard({
   return (
     <Link
       href={`/work#${project.id}`}
+      prefetch={true}
       className={cn(
         "group relative flex flex-col justify-between bg-white text-ink border-2 border-ink shadow-card-ink card-interactive p-5 sm:p-6 lg:p-8 block",
         className
