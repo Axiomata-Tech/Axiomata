@@ -26,13 +26,13 @@ export function Field({
       <div className="flex items-center justify-between">
         <label
           htmlFor={id}
-          className="font-heading font-bold text-base text-ink tracking-tight flex items-center gap-1 cursor-pointer select-none"
+          className="font-heading font-bold text-base text-[#111315] tracking-tight flex items-center gap-1 cursor-pointer select-none"
         >
           <span>{label}</span>
-          {required && <span className="text-green text-lg font-black">*</span>}
+          {required && <span className="text-[#00C7B7] text-lg font-black">*</span>}
         </label>
         {hint && (
-          <span className="font-mono text-xs text-muted-light">{hint}</span>
+          <span className="font-mono text-xs text-[#77766F]">{hint}</span>
         )}
       </div>
 

@@ -10,8 +10,8 @@ export interface BrowserFrameProps {
 }
 
 export function BrowserFrame({
-  url = "axiomata.studio",
-  ariaLabel = "Website mockup browser preview",
+  url = "system.axiomata.in",
+  ariaLabel = "System application interface preview",
   className,
   children,
 }: BrowserFrameProps) {
@@ -20,36 +20,37 @@ export function BrowserFrame({
       role="img"
       aria-label={ariaLabel}
       className={cn(
-        "relative w-full bg-white border-2 border-ink shadow-card-ink overflow-hidden select-none",
+        "relative w-full bg-[#111315] border-2 border-[#111315] shadow-sm rounded-[2px] overflow-hidden select-none",
         className
       )}
     >
-      {/* Browser Chrome Header */}
-      <div className="h-9 px-3.5 bg-white border-b-2 border-ink flex items-center justify-between gap-3">
-        {/* Window Dots */}
-        <div className="flex items-center gap-1.5" aria-hidden="true">
-          <span className="w-2.5 h-2.5 rounded-full border border-ink bg-paper inline-block" />
-          <span className="w-2.5 h-2.5 rounded-full border border-ink bg-paper inline-block" />
-          <span className="w-2.5 h-2.5 rounded-full border border-ink bg-green inline-block" />
+      {/* Chrome Header Bar */}
+      <div className="h-9 px-3.5 bg-[#171A1D] border-b border-[#3B4143] flex items-center justify-between gap-3">
+        {/* Status Indicators */}
+        <div className="flex items-center gap-2 text-[10px] font-mono text-[#00C7B7]" aria-hidden="true">
+          <span className="w-2 h-2 rounded-full bg-[#00C7B7] inline-block" />
+          <span className="font-bold tracking-wider">LIVE APPLICATION</span>
         </div>
 
         {/* URL Pill */}
         <div
           aria-hidden="true"
-          className="flex-1 max-w-[220px] sm:max-w-[280px] h-5 px-2.5 bg-paper border border-ink flex items-center justify-center text-[11px] font-mono text-ink tracking-tight truncate"
+          className="flex-1 max-w-[240px] sm:max-w-[300px] h-5 px-3 bg-[#111315] border border-[#3B4143] flex items-center justify-center text-[11px] font-mono text-[#F6F2E9] tracking-tight truncate rounded-[2px]"
         >
-          <span className="text-muted-light mr-1">https://</span>
-          <span className="font-semibold truncate">{url}</span>
+          <span className="text-[#77766F] mr-1">https://</span>
+          <span className="font-semibold text-[#F6F2E9] truncate">{url}</span>
         </div>
 
-        {/* Empty spacer to balance header */}
-        <div className="w-8" aria-hidden="true" />
+        {/* Action Marker */}
+        <div className="text-[10px] font-mono text-[#77766F]" aria-hidden="true">
+          [SYS]
+        </div>
       </div>
 
-      {/* Mockup Canvas */}
+      {/* Frame Canvas */}
       <div
         aria-hidden="true"
-        className="relative w-full aspect-[16/10] overflow-hidden bg-paper"
+        className="relative w-full aspect-[16/10] overflow-hidden bg-[#1A1D20]"
       >
         {children}
       </div>

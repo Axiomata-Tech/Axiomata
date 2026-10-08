@@ -1,23 +1,26 @@
 export interface PrincipleItem {
   number: string;
-  label: string;
-  statement: string;
+  title: string;
+  description: string;
 }
 
 export const PRINCIPLES: PrincipleItem[] = [
   {
     number: "01",
-    label: "UNDERSTAND FIRST",
-    statement: "We start with your business, not a template.",
+    title: "Practical",
+    description:
+      "We solve real operational problems rather than adding technology for its own sake. Every feature serves a clear business outcome.",
   },
   {
     number: "02",
-    label: "DESIGN WITH PURPOSE",
-    statement: "Every section exists to help your customers understand, trust or act.",
+    title: "Clear",
+    description:
+      "Good systems should be understandable, maintainable, and useful for the people who rely on them every single day.",
   },
   {
     number: "03",
-    label: "BUILD FOR TOMORROW",
-    statement: "Your website should be able to grow alongside your business.",
+    title: "Built to Grow",
+    description:
+      "Software solutions should support your business beyond the first version — built on clean architecture ready to scale.",
   },
 ];

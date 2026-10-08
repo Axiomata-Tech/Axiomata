@@ -1,15 +1,16 @@
 export const TOKENS = {
-  ink: "#1C1410",
-  brown900: "#2E211A",
-  brown700: "#5A4034",
-  mutedLight: "#6B5242",
-  mutedDark: "#B9B2A8",
-  gray200: "#E3E0DA",
-  gray300: "#CFCBC4",
-  paper: "#F4F2EE",
+  ink: "#111315",
+  ivory: "#F6F2E9",
+  teal: "#00C7B7",
+  tealSoft: "#DDF5F1",
+  charcoal: "#3B4143",
+  muted: "#77766F",
+  border: "#E2DDD3",
   white: "#FFFFFF",
-  green: "#0FA958",
-  greenDeep: "#0B8A47",
+  paper: "#F6F2E9", // Warm Ivory alias for backward compatibility
+  green: "#00C7B7", // Electric Teal alias for backward compatibility
+  mutedLight: "#77766F", // Alias for backward compatibility
+  mutedDark: "#77766F", // Alias for backward compatibility
 } as const;
 
 export type TokenKey = keyof typeof TOKENS;

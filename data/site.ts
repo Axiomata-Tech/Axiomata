@@ -11,28 +11,26 @@ export interface SiteConfig {
   url: string;
   nav: NavItem[];
   social: {
-    instagram: string;
     linkedin: string;
+    github: string;
   };
 }
 
 export const SITE: SiteConfig = {
   name: "AXIOMATA",
-  tagline: "Digital experiences. Built for what comes next.",
+  tagline: "Technology for businesses ready to move.",
   description:
-    "Axiomata designs and builds modern websites and digital experiences for small businesses, local companies and growing brands.",
+    "Axiomata designs and builds practical digital solutions, custom software, workflow automation, and AI integrations for growing businesses.",
   email: "hello@axiomata.in",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://axiomata.in",
   nav: [
+    { label: "Solutions", href: "/#services" },
     { label: "Work", href: "/#work" },
-    { label: "Services", href: "/#services" },
     { label: "Process", href: "/#process" },
     { label: "About", href: "/#about" },
   ],
   social: {
-    // TODO: Update with real Instagram profile URL
-    instagram: "#",
-    // TODO: Update with real LinkedIn profile URL
     linkedin: "#",
+    github: "#",
   },
 };

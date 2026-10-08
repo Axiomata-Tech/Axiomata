@@ -15,7 +15,7 @@ export function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 24) {
+      if (window.scrollY > 20) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
@@ -31,19 +31,20 @@ export function Navbar() {
     <>
       <header
         className={cn(
-          "sticky top-0 z-40 w-full transition-[background-color,border-color,box-shadow] duration-200 ease-out",
+          "sticky top-0 z-40 w-full transition-[background-color,border-color] duration-200 ease-out",
           isScrolled
-            ? "bg-paper border-b-2 border-ink shadow-[0_4px_0_0_var(--ink)]"
-            : "bg-transparent border-b-2 border-transparent shadow-none"
+            ? "bg-[#F6F2E9]/92 backdrop-blur-md border-b border-[#E2DDD3]"
+            : "bg-transparent border-b border-transparent"
         )}
       >
-        <div className="mx-auto w-full max-w-[1280px] h-[72px] px-5 sm:px-6 lg:px-10 flex items-center justify-between">
+        <div className="mx-auto w-full max-w-[1280px] h-[72px] px-5 sm:px-8 lg:px-12 flex items-center justify-between">
           {/* Logo Wordmark */}
           <Link
             href="/"
-            className="font-heading font-bold text-2xl tracking-[0.04em] text-ink select-none hover:opacity-90"
+            className="font-heading font-black text-2xl tracking-[0.06em] text-[#111315] select-none hover:opacity-90 flex items-center gap-2"
           >
-            {SITE.name}
+            <span>{SITE.name}</span>
+            <span className="w-2 h-2 rounded-full bg-[#00C7B7]" aria-hidden="true" />
           </Link>
 
           {/* Desktop Navigation Links */}
@@ -55,10 +56,10 @@ export function Navbar() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="relative font-heading font-semibold text-[17px] text-ink transition-colors hover:text-ink focus-visible:outline-3 py-1 group"
+                className="relative font-heading font-semibold text-[16px] text-[#111315] transition-colors hover:text-[#00C7B7] py-1 group"
               >
                 {item.label}
-                <span className="absolute bottom-0 left-0 w-full h-[3px] bg-green scale-x-0 group-hover:scale-x-100 transition-transform duration-150 origin-left" />
+                <span className="absolute bottom-0 left-0 w-full h-[2px] bg-[#00C7B7] scale-x-0 group-hover:scale-x-100 transition-transform duration-150 origin-left" />
               </Link>
             ))}
           </nav>
@@ -66,7 +67,7 @@ export function Navbar() {
           {/* Desktop Right CTA */}
           <div className="hidden lg:flex items-center">
             <Button href="/contact" variant="primary" arrow="right">
-              Start a project
+              Start a conversation
             </Button>
           </div>
 
@@ -78,7 +79,7 @@ export function Navbar() {
             aria-expanded={mobileMenuOpen}
             aria-controls="mobile-menu"
             aria-label="Open menu"
-            className="lg:hidden w-11 h-11 flex items-center justify-center bg-white border-2 border-ink text-ink shadow-btn-ink hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-[2px] active:translate-y-[2px] transition-transform"
+            className="lg:hidden w-11 h-11 flex items-center justify-center bg-[#FFFFFF] border-2 border-[#111315] text-[#111315] rounded-[2px] transition-colors hover:bg-[#00C7B7]"
           >
             <Menu className="w-6 h-6 stroke-[2.5]" />
           </button>

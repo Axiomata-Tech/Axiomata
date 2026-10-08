@@ -2,6 +2,22 @@
   "name": "axiomata",
   "version": "0.1.0",
   "private": true,
+  "description": "Official Website of Axiomata",
+  "homepage": "https://github.com/Axiomata-Tech/Axiomata#readme",
+  "bugs": {
+    "url": "https://github.com/Axiomata-Tech/Axiomata/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Axiomata-Tech/Axiomata.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",

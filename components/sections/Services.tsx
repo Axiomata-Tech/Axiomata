@@ -1,35 +1,39 @@
+"use client";
+
 import React from "react";
 import { Eyebrow } from "@/ui/Eyebrow";
-import { Reveal } from "@/ui/Reveal";
 import { ServiceCard } from "@/cards/ServiceCard";
 import { SERVICES } from "@/data/services";
+import { Reveal } from "@/ui/Reveal";
 
 export function Services() {
   return (
     <section
       id="services"
-      aria-labelledby="services-heading"
-      className="w-full bg-gray-200 text-ink border-b-2 border-ink"
+      aria-label="Capabilities and Services"
+      className="w-full bg-[#F6F2E9] text-[#111315] border-b-2 border-[#111315] py-20 sm:py-28 lg:py-36"
     >
-      <div className="mx-auto w-full max-w-[1280px] px-5 sm:px-6 lg:px-10 py-[72px] sm:py-[88px] lg:py-[120px]">
+      <div className="mx-auto w-full max-w-[1280px] px-5 sm:px-8 lg:px-12 space-y-16">
         {/* Section Header */}
-        <div className="max-w-3xl mb-12 sm:mb-16">
-          <Reveal>
-            <Eyebrow>WHAT WE BUILD</Eyebrow>
-            <h2
-              id="services-heading"
-              className="text-[clamp(2.25rem,4.5vw+0.5rem,4.5rem)] font-heading font-black tracking-[-0.03em] leading-[1.0] text-ink uppercase mt-3"
-            >
-              Digital foundations designed around your business.
-            </h2>
-          </Reveal>
-        </div>
+        <Reveal>
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-8 border-b-2 border-[#111315]">
+            <div className="space-y-3">
+              <Eyebrow>CAPABILITY MODEL</Eyebrow>
+              <h2 className="text-3xl sm:text-5xl font-heading font-black text-[#111315] uppercase tracking-tight">
+                Software, Automation &amp; AI
+              </h2>
+            </div>
+            <p className="text-[#3B4143] text-base sm:text-lg max-w-md">
+              We design and develop core technology solutions engineered for real business growth.
+            </p>
+          </div>
+        </Reveal>
 
-        {/* 3-Column Services Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+        {/* 2x2 Capability Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {SERVICES.map((service, index) => (
-            <Reveal key={service.id} delay={index * 0.12} className="h-full">
-              <ServiceCard service={service} className="h-full" />
+            <Reveal key={service.number} delay={index * 0.1}>
+              <ServiceCard service={service} />
             </Reveal>
           ))}
         </div>

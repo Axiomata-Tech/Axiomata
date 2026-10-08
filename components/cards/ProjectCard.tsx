@@ -1,12 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
-import { BrowserFrame } from "@/ui/BrowserFrame";
-import { ConceptBadge } from "@/ui/ConceptBadge";
-import { NoireMockup } from "@/mockups/NoireMockup";
-import { VeraMockup } from "@/mockups/VeraMockup";
-import { NorthMockup } from "@/mockups/NorthMockup";
-import { MotifMockup } from "@/mockups/MotifMockup";
+import { ArrowUpRight, CheckCircle2 } from "lucide-react";
+import { Tag } from "@/ui/Tag";
 import type { ProjectItem } from "@/data/projects";
 import { cn } from "@/lib/cn";
 
@@ -21,70 +16,76 @@ export function ProjectCard({
   className,
   isFeatured = false,
 }: ProjectCardProps) {
-  const renderMockup = () => {
-    switch (project.id) {
-      case "noire":
-        return <NoireMockup />;
-      case "vera":
-        return <VeraMockup />;
-      case "north":
-        return <NorthMockup />;
-      case "motif":
-        return <MotifMockup />;
-      default:
-        return null;
-    }
-  };
-
   return (
     <Link
       href={`/work#${project.id}`}
       prefetch={true}
       className={cn(
-        "group relative flex flex-col justify-between bg-white text-ink border-2 border-ink shadow-card-ink card-interactive p-5 sm:p-6 lg:p-8 block",
+        "group relative flex flex-col justify-between bg-[#FFFFFF] text-[#111315] border-2 border-[#111315] p-6 sm:p-8 lg:p-10 transition-colors duration-200 hover:border-[#00C7B7] block",
         className
       )}
     >
-      {/* Top Media Container with Badge */}
-      <div className="relative w-full mb-6">
-        <ConceptBadge className="absolute top-3 left-3 z-20" />
-        <div className="transition-transform duration-300 ease-out group-hover:scale-[1.02] motion-reduce:group-hover:scale-100">
-          <BrowserFrame url={project.url} ariaLabel={project.ariaLabel}>
-            {renderMockup()}
-          </BrowserFrame>
+      <div>
+        {/* Top Header Row */}
+        <div className="flex items-center justify-between pb-4 border-b-2 border-[#111315] mb-6">
+          <div className="flex items-center gap-3">
+            <span className="font-mono text-base font-bold text-[#77766F]">
+              [{project.number}]
+            </span>
+            <span className="font-mono text-xs font-bold uppercase tracking-wider text-[#00C7B7]">
+              {project.category}
+            </span>
+          </div>
+          <div className="w-9 h-9 rounded-full border border-[#111315] bg-[#F6F2E9] flex items-center justify-center transition-colors group-hover:bg-[#00C7B7]">
+            <ArrowUpRight className="w-4 h-4 text-[#111315]" />
+          </div>
+        </div>
+
+        {/* Project Title */}
+        <h3
+          className={cn(
+            "font-heading font-black text-[#111315] tracking-tight uppercase group-hover:text-[#00C7B7] transition-colors mb-2",
+            isFeatured ? "text-2xl sm:text-4xl" : "text-xl sm:text-2xl"
+          )}
+        >
+          {project.name}
+        </h3>
+        <p className="font-mono text-xs text-[#77766F] uppercase tracking-wider mb-6">
+          Client: {project.clientType}
+        </p>
+
+        {/* Structured Case Study Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 bg-[#F6F2E9] p-4 border border-[#E2DDD3] rounded-[2px] mb-6 text-sm">
+          <div>
+            <span className="font-mono text-[11px] font-bold text-[#111315] uppercase block mb-1">
+              Problem
+            </span>
+            <p className="text-[#3B4143] leading-relaxed text-xs sm:text-sm">
+              {project.problem}
+            </p>
+          </div>
+          <div>
+            <span className="font-mono text-[11px] font-bold text-[#00C7B7] uppercase block mb-1">
+              Approach &amp; Solution
+            </span>
+            <p className="text-[#3B4143] leading-relaxed text-xs sm:text-sm">
+              {project.approach}
+            </p>
+          </div>
+        </div>
+
+        {/* Key Outcome Highlight */}
+        <div className="flex items-start gap-2.5 bg-[#DDF5F1] p-3.5 border border-[#00C7B7] text-xs sm:text-sm font-semibold text-[#111315] mb-6">
+          <CheckCircle2 className="w-5 h-5 text-[#00C7B7] flex-shrink-0 mt-0.5" />
+          <span>{project.outcome}</span>
         </div>
       </div>
 
-      {/* Project Info Header */}
-      <div className="pt-4 border-t-2 border-ink flex flex-col justify-between gap-4 mt-auto">
-        <div className="flex items-center justify-between gap-2">
-          <div className="flex items-center gap-3">
-            <span className="font-mono text-sm sm:text-base font-bold text-muted-light">
-              {project.number}
-            </span>
-            <h3
-              className={cn(
-                "font-heading font-bold text-ink tracking-tight uppercase group-hover:text-green-deep transition-colors",
-                isFeatured ? "text-2xl sm:text-3xl" : "text-xl sm:text-2xl"
-              )}
-            >
-              {project.name}
-            </h3>
-          </div>
-
-          <div
-            aria-hidden="true"
-            className="w-10 h-10 rounded-full border-2 border-ink bg-paper flex items-center justify-center transition-colors group-hover:bg-green group-hover:scale-105"
-          >
-            <ArrowUpRight className="w-5 h-5 text-ink stroke-[2.5] transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-          </div>
-        </div>
-
-        {/* Metadata Row */}
-        <div className="flex flex-wrap items-center justify-between gap-2 font-mono text-xs text-muted-light">
-          <span className="font-semibold text-ink">{project.category}</span>
-          <span>{project.meta}</span>
-        </div>
+      {/* Footer Technology Tags */}
+      <div className="pt-4 border-t border-[#E2DDD3] flex flex-wrap gap-2 mt-auto">
+        {project.technology.map((tech) => (
+          <Tag key={tech}>{tech}</Tag>
+        ))}
       </div>
     </Link>
   );
