@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { cn } from "@/lib/cn";
 
-export type ButtonVariant = "primary" | "secondary" | "dark";
+export type ButtonVariant = "primary" | "secondary" | "dark" | "outline";
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -27,30 +27,32 @@ export function Button({
 }: ButtonProps) {
   const getVariantStyles = () => {
     if (disabled) {
-      return "bg-gray-300 text-muted-light border-ink cursor-not-allowed shadow-none opacity-80";
+      return "bg-[#E2DDD3] text-[#77766F] border-[#E2DDD3] cursor-not-allowed opacity-70";
     }
 
     switch (variant) {
       case "primary":
-        // Green background, ink text
+        // Ink background, Warm Ivory text -> Hover Electric Teal background, Ink text
         return cn(
-          "bg-green text-ink border-2 border-ink",
-          onDark ? "shadow-btn-paper hover:shadow-[7px_7px_0_0_var(--paper)] active:shadow-[2px_2px_0_0_var(--paper)]" : "shadow-btn-ink hover:shadow-[7px_7px_0_0_var(--ink)] active:shadow-[2px_2px_0_0_var(--ink)]",
-          "hover:-translate-x-[3px] hover:-translate-y-[3px] active:translate-x-[2px] active:translate-y-[2px]"
+          "bg-[#111315] text-[#F6F2E9] border-2 border-[#111315]",
+          "hover:bg-[#00C7B7] hover:text-[#111315] hover:border-[#00C7B7]"
         );
       case "secondary":
-        // White background, ink text
+        // Outlined Warm Ivory background
         return cn(
-          "bg-white text-ink border-2 border-ink",
-          onDark ? "shadow-btn-paper hover:shadow-[7px_7px_0_0_var(--paper)] active:shadow-[2px_2px_0_0_var(--paper)]" : "shadow-btn-ink hover:shadow-[7px_7px_0_0_var(--ink)] active:shadow-[2px_2px_0_0_var(--ink)]",
-          "hover:-translate-x-[3px] hover:-translate-y-[3px] active:translate-x-[2px] active:translate-y-[2px]"
+          "bg-transparent text-[#111315] border-2 border-[#111315]",
+          "hover:bg-[#111315] hover:text-[#F6F2E9]"
         );
       case "dark":
-        // Ink background, paper text
+        // On dark background primary button
         return cn(
-          "bg-ink text-paper border-2",
-          onDark ? "border-paper shadow-btn-paper hover:shadow-[7px_7px_0_0_var(--paper)]" : "border-ink shadow-btn-ink hover:shadow-[7px_7px_0_0_var(--ink)]",
-          "hover:-translate-x-[3px] hover:-translate-y-[3px] active:translate-x-[2px] active:translate-y-[2px]"
+          "bg-[#F6F2E9] text-[#111315] border-2 border-[#F6F2E9]",
+          "hover:bg-[#00C7B7] hover:text-[#111315] hover:border-[#00C7B7]"
+        );
+      case "outline":
+        return cn(
+          "bg-transparent text-[#111315] border border-[#E2DDD3]",
+          "hover:border-[#111315] hover:text-[#00C7B7]"
         );
     }
   };
@@ -63,7 +65,7 @@ export function Button({
       {arrowSymbol && (
         <span
           aria-hidden="true"
-          className="inline-block transition-transform duration-150 ease-out group-hover:translate-x-1.5"
+          className="inline-block transition-transform duration-200 ease-out group-hover:translate-x-1.5"
         >
           {arrowSymbol}
         </span>
@@ -72,10 +74,10 @@ export function Button({
   );
 
   const baseClasses = cn(
-    "group relative inline-flex items-center justify-center gap-3 px-6 py-3 min-h-[52px]",
-    "font-heading font-semibold text-[17px] leading-tight select-none",
-    "transition-[transform,box-shadow,background-color] duration-150 ease-out",
-    "focus-visible:outline-3 focus-visible:outline-ink focus-visible:outline-offset-[3px]",
+    "group relative inline-flex items-center justify-center gap-3 px-6 py-3.5 min-h-[50px]",
+    "font-heading font-semibold text-[16px] leading-tight select-none rounded-[2px]",
+    "transition-colors duration-200 ease-out",
+    "focus-visible:outline-3 focus-visible:outline-[#111315] focus-visible:outline-offset-[3px]",
     fullWidth ? "w-full" : "w-auto",
     getVariantStyles(),
     className

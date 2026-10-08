@@ -72,10 +72,10 @@ export function ContactForm() {
 
   const inputClass = (hasError: boolean) =>
     cn(
-      "w-full bg-white text-ink border-2 border-ink px-4 py-3 min-h-[52px]",
-      "font-heading text-base font-semibold",
-      "shadow-btn-ink transition-[box-shadow,border-color] duration-150",
-      "focus:shadow-btn-green focus:outline-3 focus:outline-ink focus:outline-offset-[3px]",
+      "w-full bg-[#FFFFFF] text-[#111315] border-2 border-[#111315] px-4 py-3 min-h-[50px] rounded-[2px]",
+      "font-heading text-base font-normal placeholder:text-[#77766F]",
+      "transition-colors duration-150",
+      "focus:border-[#00C7B7] focus:outline-3 focus:outline-[#111315] focus:outline-offset-[2px]",
       hasError && "border-[#A82424]"
     );
 
@@ -86,19 +86,19 @@ export function ContactForm() {
         tabIndex={-1}
         role="status"
         aria-live="polite"
-        className="bg-white border-2 border-ink shadow-card-ink p-8 sm:p-12 space-y-6 focus:outline-none"
+        className="bg-[#FFFFFF] border-2 border-[#111315] p-8 sm:p-12 space-y-6 focus:outline-none rounded-[2px]"
       >
-        <div className="flex items-center gap-3 text-green">
+        <div className="flex items-center gap-3 text-[#00C7B7]">
           <CheckCircle2 className="w-8 h-8 stroke-[2.5]" />
-          <span className="font-mono text-xs uppercase tracking-widest font-bold text-ink">
-            INQUIRY DELIVERED
+          <span className="font-mono text-xs uppercase tracking-widest font-bold text-[#111315]">
+            INQUIRY RECEIVED
           </span>
         </div>
-        <h3 className="font-heading font-black text-3xl sm:text-4xl text-ink uppercase tracking-tight">
+        <h3 className="font-heading font-extrabold text-2xl sm:text-3xl text-[#111315] tracking-tight">
           Thanks. We&apos;ll be in touch.
         </h3>
-        <p className="text-muted-light text-lg leading-relaxed">
-          We have received your message and will review your business requirements. You can expect a thoughtful response from our studio within 24 hours.
+        <p className="text-[#3B4143] text-lg leading-relaxed">
+          We have received your message and will review your technical requirements. You can expect a thoughtful response from our engineering team within 24 hours.
         </p>
         <div className="pt-4">
           <Button
@@ -119,7 +119,7 @@ export function ContactForm() {
     <form
       onSubmit={handleSubmit(onSubmit)}
       noValidate
-      className="bg-white border-2 border-ink shadow-card-ink p-6 sm:p-10 space-y-6"
+      className="bg-[#FFFFFF] border-2 border-[#111315] p-6 sm:p-10 space-y-6 rounded-[2px]"
     >
       {/* Summary Error Alert */}
       {hasFormErrors && (
@@ -152,7 +152,7 @@ export function ContactForm() {
         </div>
       )}
 
-      {/* Honeypot field (hidden from screen & readers) */}
+      {/* Honeypot field (hidden) */}
       <div className="sr-only" aria-hidden="true">
         <label htmlFor="company_website">Company Website (leave blank)</label>
         <input
@@ -187,14 +187,14 @@ export function ContactForm() {
         {/* 2. Business Name */}
         <Field
           id="businessName"
-          label="Business Name"
+          label="Business / Company Name"
           required
           error={errors.businessName?.message}
         >
           <input
             id="businessName"
             type="text"
-            placeholder="Studio / Company"
+            placeholder="Acme Corp / Startup"
             aria-required="true"
             aria-invalid={errors.businessName ? "true" : "false"}
             aria-describedby={errors.businessName ? "businessName-error" : undefined}
@@ -207,14 +207,14 @@ export function ContactForm() {
       {/* 3. Email */}
       <Field
         id="email"
-        label="Email Address"
+        label="Work Email Address"
         required
         error={errors.email?.message}
       >
         <input
           id="email"
           type="email"
-          placeholder="jane@example.com"
+          placeholder="jane@company.com"
           aria-required="true"
           aria-invalid={errors.email ? "true" : "false"}
           aria-describedby={errors.email ? "email-error" : undefined}
@@ -223,10 +223,10 @@ export function ContactForm() {
         />
       </Field>
 
-      {/* 4. What does your business do? */}
+      {/* 4. What problem are you trying to solve? */}
       <Field
         id="businessDescription"
-        label="What does your business do?"
+        label="What problem are you trying to solve?"
         required
         hint="Min. 10 characters"
         error={errors.businessDescription?.message}
@@ -234,7 +234,7 @@ export function ContactForm() {
         <textarea
           id="businessDescription"
           rows={3}
-          placeholder="Tell us about your industry, audience, and what makes your business unique..."
+          placeholder="Tell us about your operational challenge, workflow bottlenecks, or product requirements..."
           aria-required="true"
           aria-invalid={errors.businessDescription ? "true" : "false"}
           aria-describedby={
@@ -246,10 +246,10 @@ export function ContactForm() {
       </Field>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-        {/* 5. What do you need? */}
+        {/* 5. Capability Needed */}
         <Field
           id="serviceNeeded"
-          label="What do you need?"
+          label="Capability Needed"
           required
           error={errors.serviceNeeded?.message}
         >
@@ -272,7 +272,7 @@ export function ContactForm() {
         {/* 6. Budget range */}
         <Field
           id="budgetRange"
-          label="Budget range"
+          label="Estimated Budget"
           hint="Optional"
           error={errors.budgetRange?.message}
         >
@@ -293,14 +293,14 @@ export function ContactForm() {
       {/* 7. Anything else? */}
       <Field
         id="additionalInfo"
-        label="Anything else?"
+        label="Timeline &amp; Technical Context"
         hint="Optional"
         error={errors.additionalInfo?.message}
       >
         <textarea
           id="additionalInfo"
           rows={3}
-          placeholder="Timeline expectations, existing links, or specific questions..."
+          placeholder="Timeline expectations, existing tech stack links, or specific questions..."
           className={cn(inputClass(false), "min-h-[90px] resize-y")}
           {...register("additionalInfo")}
         />
@@ -317,7 +317,7 @@ export function ContactForm() {
           fullWidth
           className="text-lg py-4"
         >
-          {isSubmitting ? "Sending inquiry…" : "Send inquiry"}
+          {isSubmitting ? "Submitting inquiry…" : "Start a conversation"}
         </Button>
       </div>
     </form>

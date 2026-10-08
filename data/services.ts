@@ -1,33 +1,42 @@
 export interface ServiceItem {
-  id: string;
   number: string;
   title: string;
+  subtitle: string;
   description: string;
   tags: string[];
 }
 
 export const SERVICES: ServiceItem[] = [
   {
-    id: "websites",
     number: "01",
-    title: "WEBSITES",
+    title: "Software",
+    subtitle: "Custom software built around your business.",
     description:
-      "Modern, responsive websites designed around your business, your customers and your goals.",
-    tags: ["Design", "Development", "Responsive", "SEO-ready"],
+      "Web applications, internal tools, and customer-facing platforms engineered for real operational needs.",
+    tags: ["Custom Web Apps", "Internal Portals", "SaaS Platforms", "Dashboards"],
   },
   {
-    id: "landing-pages",
     number: "02",
-    title: "LANDING PAGES",
-    description: "Focused pages designed to turn attention into action.",
-    tags: ["Campaigns", "Products", "Services", "Launches"],
+    title: "Automation",
+    subtitle: "Less manual work. More efficient operations.",
+    description:
+      "Connect disparate workflows, eliminate repetitive data entry, and improve how teams collaborate and operate.",
+    tags: ["Workflow Systems", "Data Pipelines", "Process Automation", "System Sync"],
   },
   {
-    id: "digital-presence",
     number: "03",
-    title: "DIGITAL PRESENCE",
+    title: "AI Integration",
+    subtitle: "Useful AI, not AI for the sake of AI.",
     description:
-      "A consistent online presence that helps customers discover, understand and trust your business.",
-    tags: ["Web", "Social", "Brand presence", "Strategy"],
+      "Integrate practical intelligent capabilities into products, internal workflows, and core business processes.",
+    tags: ["LLM Agents", "Document AI", "Predictive Analytics", "RAG Systems"],
+  },
+  {
+    number: "04",
+    title: "Digital Foundations",
+    subtitle: "Build the systems you need to scale.",
+    description:
+      "APIs, databases, system integrations, and cloud-ready application architecture designed for long-term reliability.",
+    tags: ["API Architecture", "Database Design", "Cloud Infrastructure", "System Migration"],
   },
 ];

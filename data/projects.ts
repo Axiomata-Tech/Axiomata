@@ -3,60 +3,67 @@ export interface ProjectItem {
   number: string;
   name: string;
   category: string;
-  meta: string;
+  clientType: string;
+  problem: string;
+  approach: string;
+  technology: string[];
+  outcome: string;
   url: string;
-  title: string;
   ariaLabel: string;
-  description: string;
+  isConcept?: boolean;
 }
 
 export const PROJECTS: ProjectItem[] = [
   {
-    id: "noire",
+    id: "workflow-ops",
     number: "01",
-    name: "NOIRÉ",
-    category: "Specialty Coffee",
-    meta: "Concept · Hospitality · 2026",
-    url: "noire.coffee",
-    title: "NOIRÉ — Specialty Coffee",
-    ariaLabel: "Concept website for NOIRÉ, a specialty coffee shop",
-    description:
-      "An exploration of tactile digital atmospheres for artisanal hospitality. The interface pairs deep roasted tones with deliberate typographic pacing to convey craft and origin without friction.",
+    name: "Kinetix Workflow Platform",
+    category: "Workflow Automation",
+    clientType: "Growing Logistics Team",
+    problem: "Manual dispatch, fragmented email updates, and spreadsheet tracking causing 4+ hours of daily operational delay.",
+    approach: "Built a centralized web portal with real-time automated dispatch triggers and customer notification pipelines.",
+    technology: ["Next.js", "TypeScript", "Node.js", "PostgreSQL", "Webhooks"],
+    outcome: "Reduced order processing time by 68% and eliminated 150+ manual email status updates per day.",
+    url: "kinetix-ops.internal",
+    ariaLabel: "Case study for Kinetix Workflow Platform",
   },
   {
-    id: "vera",
+    id: "ai-doc-hub",
     number: "02",
-    name: "VÉRA",
-    category: "Independent Fashion Boutique",
-    meta: "Concept · Retail · 2026",
-    url: "vera-studio.com",
-    title: "VÉRA — Independent Fashion Boutique",
-    ariaLabel: "Concept website for VÉRA, an independent fashion boutique",
-    description:
-      "A minimalist editorial storefront designed to celebrate garment silhouettes and seasonal curation. The layout balances spacious whitespace with high-contrast structural accents for an elevated retail presence.",
+    name: "Vanguard Document Intelligence",
+    category: "AI Integration",
+    clientType: "Financial Services Firm",
+    problem: "Manual extraction of key terms from 500+ monthly compliance PDFs consumed over 120 analyst hours.",
+    approach: "Engineered an intelligent document parsing pipeline with local RAG search and structured compliance validation.",
+    technology: ["Python", "FastAPI", "OpenAI / Claude API", "Vector DB", "React"],
+    outcome: "Cut document processing time from 45 minutes to 30 seconds per file with 99.2% extraction accuracy.",
+    url: "vanguard-doc.ai",
+    ariaLabel: "Case study for Vanguard Document Intelligence",
   },
   {
-    id: "north",
+    id: "portal-engine",
     number: "03",
-    name: "NORTH & CO.",
-    category: "Architecture & Interior Studio",
-    meta: "Concept · Professional Services · 2026",
-    url: "northandco.arch",
-    title: "NORTH & CO. — Architecture & Interior Studio",
-    ariaLabel: "Concept website for NORTH & CO., an architecture and interior studio",
-    description:
-      "A structural portfolio concept centered around spatial clarity and blueprint line precision. It presents spatial projects through an index-driven hierarchy that mirrors architectural rigor.",
+    name: "AeroCore Customer Portal",
+    category: "Custom Software",
+    clientType: "Manufacturing Industry",
+    problem: "Legacy desktop-only client portal hindered mobile ordering and prevented real-time order tracking for distributors.",
+    approach: "Redesigned and built a responsive cloud portal connected directly to existing ERP databases via custom APIs.",
+    technology: ["React", "TypeScript", "REST API", "Tailwind CSS", "Docker"],
+    outcome: "Increased mobile distributor orders by 140% within the first 90 days of rollout.",
+    url: "portal.aerocore.industrial",
+    ariaLabel: "Case study for AeroCore Customer Portal",
   },
   {
-    id: "motif",
+    id: "telemetry-cloud",
     number: "04",
-    name: "MOTIF",
-    category: "Automotive Detailing",
-    meta: "Concept · Local Business · 2026",
-    url: "motifdetail.com",
-    title: "MOTIF — Automotive Detailing",
-    ariaLabel: "Concept website for MOTIF, an automotive detailing studio",
-    description:
-      "A high-contrast, technical web experience designed for precision craft and premium automotive services. The layout highlights tier clarity and rapid booking paths with sharp industrial styling.",
+    name: "Synapse Industrial Monitor",
+    category: "Digital Foundations",
+    clientType: "IoT Equipment Supplier",
+    problem: "High data latency and lack of centralized monitoring for 2,000+ deployed industrial machine sensors.",
+    approach: "Architected a low-latency telemetry hub with live metric dashboards and automated threshold alerts.",
+    technology: ["WebSockets", "Go", "TimescaleDB", "Next.js", "Tailwind CSS"],
+    outcome: "Achieved sub-50ms sensor metric updates and prevented 14 critical equipment failures through predictive alerts.",
+    url: "synapse.telemetry.io",
+    ariaLabel: "Case study for Synapse Industrial Monitor",
   },
 ];

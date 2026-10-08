@@ -5,63 +5,66 @@ import { ContactForm } from "@/forms/ContactForm";
 import { SITE } from "@/data/site";
 
 export const metadata: Metadata = {
-  title: "Contact — Axiomata",
+  title: "Start a Conversation — Axiomata",
   description:
-    "Start a project inquiry with Axiomata. We design and build modern websites and digital experiences for growing businesses.",
+    "Discuss your software engineering, workflow automation, or AI integration requirements with Axiomata.",
 };
 
 export default function ContactPage() {
   return (
-    <div className="w-full bg-paper text-ink">
-      <div className="mx-auto w-full max-w-[1280px] px-5 sm:px-6 lg:px-10 py-16 sm:py-24 lg:py-28">
+    <div className="w-full bg-[#F6F2E9] text-[#111315]">
+      <div className="mx-auto w-full max-w-[1280px] px-5 sm:px-8 lg:px-12 py-16 sm:py-24 lg:py-28">
         {/* Page Heading */}
         <div className="max-w-3xl mb-12 sm:mb-16 space-y-4">
-          <Eyebrow>START A PROJECT</Eyebrow>
-          <h1 className="text-[clamp(2.75rem,6vw+0.5rem,5.5rem)] font-heading font-black tracking-[-0.03em] leading-[0.98] text-ink uppercase">
-            Let&apos;s talk about your business.
+          <Eyebrow>START A CONVERSATION</Eyebrow>
+          <h1 className="text-[clamp(2.5rem,5.5vw+0.5rem,5rem)] font-heading font-extrabold tracking-tight leading-[1.08] text-[#111315]">
+            Have a problem worth solving?
           </h1>
+          <p className="text-lg sm:text-xl text-[#3B4143] leading-relaxed pt-2 font-normal">
+            Let&apos;s discuss your business workflows, custom software needs, or technical automation goals.
+          </p>
         </div>
 
-        {/* 2-Column Desktop Grid (Form 7 cols, Aside 4 cols) */}
+        {/* 2-Column Desktop Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           {/* Main Form Column (7 cols) */}
           <div className="lg:col-span-7">
             <ContactForm />
           </div>
 
-          {/* Sidebar Aside Column (4 cols, col-start-9) */}
+          {/* Sidebar Aside Column (4 cols) */}
           <aside className="lg:col-span-4 lg:col-start-9 space-y-8">
             {/* Direct Email Card */}
-            <div className="bg-white border-2 border-ink shadow-btn-ink p-6 sm:p-8 space-y-4">
-              <span className="font-mono text-xs uppercase tracking-widest text-muted-light font-bold">
+            <div className="bg-[#FFFFFF] border-2 border-[#111315] p-6 sm:p-8 space-y-4 rounded-[2px]">
+              <span className="font-mono text-xs uppercase tracking-widest text-[#77766F] font-bold">
                 Direct Contact
               </span>
-              <p className="text-base text-muted-light leading-relaxed">
-                Prefer direct correspondence? Email our studio directly:
+              <p className="text-base text-[#3B4143] leading-relaxed">
+                Prefer direct email correspondence? Reach out directly to our engineering team:
               </p>
               <a
                 href={`mailto:${SITE.email}`}
-                className="font-heading font-bold text-xl text-ink underline decoration-2 underline-offset-4 hover:text-green-deep block break-all"
+                className="font-heading font-bold text-xl text-[#111315] underline decoration-2 underline-offset-4 hover:text-[#00C7B7] block break-all"
               >
                 {SITE.email}
               </a>
-              <div className="pt-2 border-t border-gray-300">
-                <span className="font-mono text-xs text-muted-light">
-                  We reply to every inquiry.
+              <div className="pt-2 border-t border-[#E2DDD3]">
+                <span className="font-mono text-xs text-[#77766F]">
+                  We reply to every technical inquiry within 24 hours.
                 </span>
               </div>
             </div>
 
             {/* Studio Info Card */}
-            <div className="bg-white border-2 border-ink shadow-btn-ink p-6 sm:p-8 space-y-3">
-              <span className="font-mono text-xs uppercase tracking-widest text-green-deep font-bold">
-                Axiomata Studio
+            <div className="bg-[#FFFFFF] border-2 border-[#111315] p-6 sm:p-8 space-y-3 rounded-[2px]">
+              <span className="font-mono text-xs uppercase tracking-widest text-[#00C7B7] font-bold">
+                Axiomata Engineering
               </span>
-              <p className="font-heading font-bold text-xl text-ink">
+              <p className="font-heading font-bold text-xl text-[#111315]">
                 {SITE.tagline}
               </p>
-              <p className="text-sm text-muted-light leading-relaxed">
-                Modern digital foundations designed around your business goals, customer clarity, and technical performance.
+              <p className="text-sm text-[#3B4143] leading-relaxed">
+                Practical software, workflow automation, and digital foundations engineered around the way your business actually operates.
               </p>
             </div>
           </aside>

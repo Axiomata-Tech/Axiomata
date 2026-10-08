@@ -1,45 +1,41 @@
 import type { Metadata } from "next";
-import { Space_Grotesk, Inter, Space_Mono } from "next/font/google";
+import { Inter, Roboto_Mono } from "next/font/google";
 import { SkipLink } from "@/components/layout/SkipLink";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { SITE } from "@/data/site";
 import "./globals.css";
 
-const spaceGrotesk = Space_Grotesk({
-  subsets: ["latin"],
-  variable: "--font-space-grotesk",
-  display: "swap",
-  weight: ["500", "600", "700"],
-});
-
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
   display: "swap",
-  weight: ["400", "500", "600"],
+  weight: ["300", "400", "500", "600", "700", "800"],
+  style: ["normal"],
 });
 
-const spaceMono = Space_Mono({
+const robotoMono = Roboto_Mono({
   subsets: ["latin"],
-  variable: "--font-space-mono",
+  variable: "--font-roboto-mono",
   display: "swap",
-  weight: ["400", "700"],
+  weight: ["400", "500", "600", "700"],
+  style: ["normal"],
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: "Axiomata — Digital Experiences for Growing Businesses",
+    default: "Axiomata — Practical Technology Solutions for Growing Businesses",
     template: "%s — Axiomata",
   },
   description: SITE.description,
   keywords: [
-    "digital studio",
-    "web design",
-    "web development",
-    "digital experiences",
-    "modern websites",
+    "IT solutions",
+    "software development",
+    "web applications",
+    "business automation",
+    "AI integration",
+    "digital transformation",
     "Axiomata",
   ],
   authors: [{ name: "Axiomata" }],
@@ -48,13 +44,13 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_IN",
     url: SITE.url,
-    title: "Axiomata — Digital Experiences for Growing Businesses",
+    title: "Axiomata — Practical Technology Solutions for Growing Businesses",
     description: SITE.description,
     siteName: SITE.name,
   },
   twitter: {
     card: "summary_large_image",
-    title: "Axiomata — Digital Experiences for Growing Businesses",
+    title: "Axiomata — Practical Technology Solutions for Growing Businesses",
     description: SITE.description,
   },
   robots: {
@@ -71,7 +67,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${spaceGrotesk.variable} ${inter.variable} ${spaceMono.variable}`}
+      className={`${inter.variable} ${robotoMono.variable}`}
     >
       <head>
         <script
@@ -89,7 +85,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="min-h-screen flex flex-col bg-paper text-ink selection:bg-green selection:text-ink antialiased">
+      <body className="min-h-screen flex flex-col bg-ivory text-ink selection:bg-teal selection:text-ink antialiased">
         <SkipLink />
         <Navbar />
         <main id="main" className="flex-1 w-full flex flex-col">
