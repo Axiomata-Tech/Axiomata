@@ -352,7 +352,7 @@ This pattern of `INK + IVORY + TEAL SIGNAL + TECHNICAL LINE + LARGE TYPE` create
 - Industry-specific creative agency positioning (Coffee, Fashion, Architecture, Auto Detailing)
 - Floating browser stack mockup cluster in hero
 
-### Keep
+### KEEP
 - Strong typography & oversized headings
 - Asymmetrical 12-column grid layout
 - Mobile accessibility (SkipLink, focus trap, aria attributes)
