@@ -22,7 +22,7 @@ export function Process() {
                 How We Engineer Solutions
               </h2>
             </div>
-            <p className="text-[#3B4143] text-base sm:text-lg max-w-md leading-relaxed font-normal">
+            <p className="text-[#3B4143] text-lg sm:text-xl max-w-lg leading-relaxed font-normal">
               A structured 4-phase methodology ensuring clarity, speed, and software quality from day one.
             </p>
           </div>
@@ -47,7 +47,7 @@ export function Process() {
                   <h3 className="font-heading font-bold text-lg sm:text-xl text-[#111315] tracking-tight mb-3">
                     {step.title}
                   </h3>
-                  <p className="text-[#3B4143] text-sm leading-relaxed mb-6 font-normal">
+                  <p className="text-[#3B4143] text-[15px] sm:text-base leading-relaxed mb-6 font-normal">
                     {step.description}
                   </p>
                 </div>

@@ -71,7 +71,7 @@ export function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.45 }}
-              className="text-lg sm:text-xl text-[#3B4143] max-w-xl leading-relaxed font-normal"
+              className="text-xl sm:text-2xl text-[#3B4143] max-w-2xl leading-relaxed font-normal"
             >
               We design and build practical digital solutions, custom software, workflow automation, and AI integrations for startups, small businesses, and growing teams.
             </motion.p>

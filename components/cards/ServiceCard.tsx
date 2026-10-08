@@ -37,7 +37,7 @@ export function ServiceCard({ service, className }: ServiceCardProps) {
         <p className="font-mono text-xs sm:text-[13px] uppercase tracking-wider font-semibold text-[#00C7B7] mb-4">
           {service.subtitle}
         </p>
-        <p className="text-[#3B4143] text-base leading-relaxed mb-8 font-normal">
+        <p className="text-[#3B4143] text-base sm:text-lg leading-relaxed mb-8 font-normal">
           {service.description}
         </p>
       </div>

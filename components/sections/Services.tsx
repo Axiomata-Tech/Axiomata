@@ -23,7 +23,7 @@ export function Services() {
                 Custom Software, Automation &amp; AI
               </h2>
             </div>
-            <p className="text-[#3B4143] text-base sm:text-lg max-w-md leading-relaxed font-normal">
+            <p className="text-[#3B4143] text-lg sm:text-xl max-w-lg leading-relaxed font-normal">
               We design and develop core technology solutions engineered for real business growth.
             </p>
           </div>

@@ -21,7 +21,7 @@ export function Philosophy() {
                 Technology should make work simpler, not more complicated.
               </h2>
             </div>
-            <p className="text-[#3B4143] text-base sm:text-lg max-w-md leading-relaxed font-normal">
+            <p className="text-[#3B4143] text-lg sm:text-xl max-w-lg leading-relaxed font-normal">
               Three architectural principles that guide how we scope, engineer, and deploy modern digital systems.
             </p>
           </div>
@@ -42,7 +42,7 @@ export function Philosophy() {
                   <h3 className="font-heading font-bold text-xl sm:text-2xl text-[#111315] tracking-tight mb-3">
                     {principle.title}
                   </h3>
-                  <p className="text-[#3B4143] text-base leading-relaxed font-normal">
+                  <p className="text-[#3B4143] text-base sm:text-lg leading-relaxed font-normal">
                     {principle.description}
                   </p>
                 </div>

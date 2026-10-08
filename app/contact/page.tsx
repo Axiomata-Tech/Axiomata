@@ -20,7 +20,7 @@ export default function ContactPage() {
           <h1 className="text-[clamp(2.5rem,5.5vw+0.5rem,5rem)] font-heading font-extrabold tracking-tight leading-[1.08] text-[#111315]">
             Have a problem worth solving?
           </h1>
-          <p className="text-lg sm:text-xl text-[#3B4143] leading-relaxed pt-2 font-normal">
+          <p className="text-xl sm:text-2xl text-[#3B4143] leading-relaxed pt-2 font-normal">
             Let&apos;s discuss your business workflows, custom software needs, or technical automation goals.
           </p>
         </div>

@@ -23,7 +23,7 @@ export function ConceptWork() {
                 Engineered Solutions
               </h2>
             </div>
-            <p className="text-[#3B4143] text-base sm:text-lg max-w-md leading-relaxed font-normal">
+            <p className="text-[#3B4143] text-lg sm:text-xl max-w-lg leading-relaxed font-normal">
               Structured technical case studies solving real business problems with measurable outcomes.
             </p>
           </div>

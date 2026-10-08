@@ -55,27 +55,27 @@ export function ProjectCard({
         </p>
 
         {/* Structured Case Study Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 bg-[#F6F2E9] p-4 border border-[#E2DDD3] rounded-[2px] mb-6 text-sm">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 bg-[#F6F2E9] p-4 border border-[#E2DDD3] rounded-[2px] mb-6">
           <div>
-            <span className="font-mono text-[11px] font-bold text-[#111315] uppercase block mb-1">
+            <span className="font-mono text-xs font-bold text-[#111315] uppercase block mb-1">
               Problem
             </span>
-            <p className="text-[#3B4143] leading-relaxed text-xs sm:text-sm">
+            <p className="text-[#3B4143] leading-relaxed text-sm sm:text-[15px] font-normal">
               {project.problem}
             </p>
           </div>
           <div>
-            <span className="font-mono text-[11px] font-bold text-[#00C7B7] uppercase block mb-1">
+            <span className="font-mono text-xs font-bold text-[#00C7B7] uppercase block mb-1">
               Approach &amp; Solution
             </span>
-            <p className="text-[#3B4143] leading-relaxed text-xs sm:text-sm">
+            <p className="text-[#3B4143] leading-relaxed text-sm sm:text-[15px] font-normal">
               {project.approach}
             </p>
           </div>
         </div>
 
         {/* Key Outcome Highlight */}
-        <div className="flex items-start gap-2.5 bg-[#DDF5F1] p-3.5 border border-[#00C7B7] text-xs sm:text-sm font-semibold text-[#111315] mb-6">
+        <div className="flex items-start gap-2.5 bg-[#DDF5F1] p-3.5 border border-[#00C7B7] text-sm sm:text-[15px] font-semibold text-[#111315] mb-6">
           <CheckCircle2 className="w-5 h-5 text-[#00C7B7] flex-shrink-0 mt-0.5" />
           <span>{project.outcome}</span>
         </div>

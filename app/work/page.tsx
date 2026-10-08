@@ -23,7 +23,7 @@ export default function WorkPage() {
             <h1 className="text-[clamp(2.5rem,5.5vw+0.5rem,5rem)] font-heading font-extrabold tracking-tight leading-[1.08] text-[#111315]">
               Engineered Solutions.
             </h1>
-            <p className="text-lg sm:text-xl text-[#3B4143] leading-relaxed pt-2 font-normal">
+            <p className="text-xl sm:text-2xl text-[#3B4143] leading-relaxed pt-2 font-normal">
               Explore how we solve operational challenges, automate complex processes, and integrate AI into real business workflows.
             </p>
           </div>

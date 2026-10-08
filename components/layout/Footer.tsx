@@ -17,20 +17,20 @@ export function Footer() {
               <span>{SITE.name}</span>
               <span className="w-2.5 h-2.5 rounded-full bg-[#00C7B7]" />
             </Link>
-            <p className="text-[#A7A39A] text-lg max-w-md font-normal leading-relaxed">
+            <p className="text-[#A7A39A] text-lg sm:text-xl max-w-md font-normal leading-relaxed">
               {SITE.tagline}
             </p>
-            <p className="font-mono text-xs text-[#77766F] uppercase tracking-wider pt-2">
+            <p className="font-mono text-xs sm:text-[13px] text-[#A7A39A] uppercase tracking-wider pt-2">
               Practical technology solutions for growing businesses.
             </p>
           </div>
 
           {/* Column 2: Capability Solutions */}
           <div className="space-y-4">
-            <p className="font-mono text-xs uppercase tracking-[0.1em] text-[#00C7B7] font-bold">
+            <p className="font-mono text-xs sm:text-[13px] uppercase tracking-[0.1em] text-[#00C7B7] font-bold">
               Solutions
             </p>
-            <ul className="space-y-2.5 font-heading font-medium text-[15px]">
+            <ul className="space-y-2.5 font-heading font-medium text-base">
               <li>
                 <Link href="/#services" className="text-[#A7A39A] hover:text-[#00C7B7] transition-colors">
                   Software Development

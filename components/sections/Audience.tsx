@@ -22,7 +22,7 @@ export function Audience() {
                 Built for Every Operational Stage
               </h2>
             </div>
-            <p className="text-[#3B4143] text-base sm:text-lg max-w-md leading-relaxed font-normal">
+            <p className="text-[#3B4143] text-lg sm:text-xl max-w-lg leading-relaxed font-normal">
               Tailored engineering engagements for businesses from seed-stage prototypes to scaling industrial operations.
             </p>
           </div>
@@ -43,7 +43,7 @@ export function Audience() {
                   <h3 className="font-heading font-bold text-xl sm:text-2xl text-[#111315] tracking-tight mb-2">
                     {item.tagline}
                   </h3>
-                  <p className="text-[#3B4143] text-base leading-relaxed mb-6 font-normal">
+                  <p className="text-[#3B4143] text-base sm:text-lg leading-relaxed mb-6 font-normal">
                     {item.description}
                   </p>
                 </div>

@@ -20,7 +20,7 @@ export function About() {
               <h2 className="text-3xl sm:text-5xl font-heading font-extrabold text-[#111315] tracking-tight leading-[1.12]">
                 Practical engineering for the businesses that need it most.
               </h2>
-              <p className="text-lg text-[#3B4143] leading-relaxed font-normal">
+              <p className="text-lg sm:text-xl text-[#3B4143] leading-relaxed font-normal">
                 Axiomata exists to make technology more useful. We bridge the gap between complex software engineering and everyday business operations — building systems that are clean, maintainable, and built for growth.
               </p>
             </div>
@@ -46,7 +46,7 @@ export function About() {
                 </div>
               </div>
 
-              <div className="space-y-3 font-mono text-xs text-[#111315]">
+              <div className="space-y-3 font-mono text-xs sm:text-[13px] text-[#111315]">
                 <div className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-[#00C7B7]" />
                   <span>Maintainable, documented codebases</span>

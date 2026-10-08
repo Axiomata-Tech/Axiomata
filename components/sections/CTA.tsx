@@ -23,7 +23,7 @@ export function CTA() {
               <span className="text-[#00C7B7]">Let&apos;s build something that works.</span>
             </h2>
 
-            <p className="text-lg sm:text-xl text-[#A7A39A] max-w-xl mx-auto leading-relaxed font-normal">
+            <p className="text-xl sm:text-2xl text-[#A7A39A] max-w-2xl mx-auto leading-relaxed font-normal">
               Tell us about your business goals, software needs, or operational bottlenecks. We&apos;ll respond with a practical technical proposal.
             </p>
 
