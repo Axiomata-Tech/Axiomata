@@ -19,11 +19,11 @@ export function ConceptWork() {
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-8 border-b-2 border-[#111315]">
             <div className="space-y-3">
               <Eyebrow>SELECTED CASE STUDIES</Eyebrow>
-              <h2 className="text-3xl sm:text-5xl font-heading font-black text-[#111315] uppercase tracking-tight">
+              <h2 className="text-3xl sm:text-5xl font-heading font-extrabold text-[#111315] tracking-tight leading-[1.12]">
                 Engineered Solutions
               </h2>
             </div>
-            <p className="text-[#3B4143] text-base sm:text-lg max-w-md">
+            <p className="text-[#3B4143] text-base sm:text-lg max-w-md leading-relaxed font-normal">
               Structured technical case studies solving real business problems with measurable outcomes.
             </p>
           </div>

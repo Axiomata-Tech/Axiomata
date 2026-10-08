@@ -13,11 +13,6 @@
   },
   "license": "ISC",
   "author": "",
-  "type": "commonjs",
-  "main": "index.js",
-  "directories": {
-    "lib": "lib"
-  },
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",

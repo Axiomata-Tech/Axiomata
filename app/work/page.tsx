@@ -20,10 +20,10 @@ export default function WorkPage() {
         <div className="mx-auto w-full max-w-[1280px] px-5 sm:px-8 lg:px-12">
           <div className="max-w-3xl space-y-4">
             <Eyebrow>SELECTED CASE STUDIES</Eyebrow>
-            <h1 className="text-[clamp(2.75rem,6vw+0.5rem,5.5rem)] font-heading font-black tracking-[-0.03em] leading-[0.98] text-[#111315] uppercase">
+            <h1 className="text-[clamp(2.5rem,5.5vw+0.5rem,5rem)] font-heading font-extrabold tracking-tight leading-[1.08] text-[#111315]">
               Engineered Solutions.
             </h1>
-            <p className="text-lg sm:text-xl text-[#3B4143] leading-relaxed pt-2">
+            <p className="text-lg sm:text-xl text-[#3B4143] leading-relaxed pt-2 font-normal">
               Explore how we solve operational challenges, automate complex processes, and integrate AI into real business workflows.
             </p>
           </div>

@@ -32,7 +32,7 @@ export function Hero() {
             </motion.div>
 
             {/* Headline */}
-            <h1 className="text-[clamp(2.75rem,6.5vw+0.5rem,5.5rem)] font-heading font-black tracking-[-0.03em] leading-[0.98] text-[#111315] uppercase">
+            <h1 className="text-[clamp(2.5rem,5.5vw+0.5rem,5rem)] font-heading font-extrabold tracking-tight leading-[1.06] text-[#111315]">
               <div className="overflow-hidden">
                 <motion.div
                   initial={shouldReduceMotion ? { opacity: 0 } : { y: "100%" }}
@@ -50,7 +50,7 @@ export function Hero() {
                   className="flex flex-wrap items-center gap-x-3 gap-y-1"
                 >
                   <span>businesses</span>
-                  <span className="inline-block px-3 py-0.5 bg-[#00C7B7] text-[#111315] border-2 border-[#111315]">
+                  <span className="inline-block px-2.5 py-0.5 bg-[#00C7B7] text-[#111315] border-2 border-[#111315] rounded-[2px]">
                     ready
                   </span>
                 </motion.div>
@@ -71,7 +71,7 @@ export function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.45 }}
-              className="text-lg sm:text-xl text-[#3B4143] max-w-xl leading-relaxed font-body"
+              className="text-lg sm:text-xl text-[#3B4143] max-w-xl leading-relaxed font-normal"
             >
               We design and build practical digital solutions, custom software, workflow automation, and AI integrations for startups, small businesses, and growing teams.
             </motion.p>

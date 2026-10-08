@@ -73,7 +73,7 @@ export function ContactForm() {
   const inputClass = (hasError: boolean) =>
     cn(
       "w-full bg-[#FFFFFF] text-[#111315] border-2 border-[#111315] px-4 py-3 min-h-[50px] rounded-[2px]",
-      "font-heading text-base font-semibold",
+      "font-heading text-base font-normal placeholder:text-[#77766F]",
       "transition-colors duration-150",
       "focus:border-[#00C7B7] focus:outline-3 focus:outline-[#111315] focus:outline-offset-[2px]",
       hasError && "border-[#A82424]"
@@ -94,7 +94,7 @@ export function ContactForm() {
             INQUIRY RECEIVED
           </span>
         </div>
-        <h3 className="font-heading font-black text-3xl sm:text-4xl text-[#111315] uppercase tracking-tight">
+        <h3 className="font-heading font-extrabold text-2xl sm:text-3xl text-[#111315] tracking-tight">
           Thanks. We&apos;ll be in touch.
         </h3>
         <p className="text-[#3B4143] text-lg leading-relaxed">

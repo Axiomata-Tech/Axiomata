@@ -17,10 +17,10 @@ export default function ContactPage() {
         {/* Page Heading */}
         <div className="max-w-3xl mb-12 sm:mb-16 space-y-4">
           <Eyebrow>START A CONVERSATION</Eyebrow>
-          <h1 className="text-[clamp(2.75rem,6vw+0.5rem,5.5rem)] font-heading font-black tracking-[-0.03em] leading-[0.98] text-[#111315] uppercase">
+          <h1 className="text-[clamp(2.5rem,5.5vw+0.5rem,5rem)] font-heading font-extrabold tracking-tight leading-[1.08] text-[#111315]">
             Have a problem worth solving?
           </h1>
-          <p className="text-lg sm:text-xl text-[#3B4143] leading-relaxed pt-2">
+          <p className="text-lg sm:text-xl text-[#3B4143] leading-relaxed pt-2 font-normal">
             Let&apos;s discuss your business workflows, custom software needs, or technical automation goals.
           </p>
         </div>

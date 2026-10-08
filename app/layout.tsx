@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Plus_Jakarta_Sans, Space_Mono } from "next/font/google";
+import { Inter, Roboto_Mono } from "next/font/google";
 import { SkipLink } from "@/components/layout/SkipLink";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -10,23 +10,15 @@ const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
   display: "swap",
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["300", "400", "500", "600", "700", "800"],
   style: ["normal"],
 });
 
-const plusJakartaSans = Plus_Jakarta_Sans({
+const robotoMono = Roboto_Mono({
   subsets: ["latin"],
-  variable: "--font-plus-jakarta",
+  variable: "--font-roboto-mono",
   display: "swap",
-  weight: ["500", "600", "700", "800"],
-  style: ["normal"],
-});
-
-const spaceMono = Space_Mono({
-  subsets: ["latin"],
-  variable: "--font-space-mono",
-  display: "swap",
-  weight: ["400", "700"],
+  weight: ["400", "500", "600", "700"],
   style: ["normal"],
 });
 
@@ -75,7 +67,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${plusJakartaSans.variable} ${spaceMono.variable}`}
+      className={`${inter.variable} ${robotoMono.variable}`}
     >
       <head>
         <script

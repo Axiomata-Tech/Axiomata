@@ -12,12 +12,12 @@ export function Footer() {
           <div className="lg:col-span-2 space-y-4">
             <Link
               href="/"
-              className="inline-flex items-center gap-2 font-heading font-black text-3xl tracking-[0.06em] text-[#F6F2E9] hover:text-[#00C7B7] transition-colors"
+              className="inline-flex items-center gap-2 font-heading font-extrabold text-3xl tracking-[0.03em] text-[#F6F2E9] hover:text-[#00C7B7] transition-colors"
             >
               <span>{SITE.name}</span>
               <span className="w-2.5 h-2.5 rounded-full bg-[#00C7B7]" />
             </Link>
-            <p className="text-[#A7A39A] text-lg max-w-md">
+            <p className="text-[#A7A39A] text-lg max-w-md font-normal leading-relaxed">
               {SITE.tagline}
             </p>
             <p className="font-mono text-xs text-[#77766F] uppercase tracking-wider pt-2">
@@ -30,24 +30,24 @@ export function Footer() {
             <p className="font-mono text-xs uppercase tracking-[0.1em] text-[#00C7B7] font-bold">
               Solutions
             </p>
-            <ul className="space-y-2.5 font-heading font-semibold text-base">
+            <ul className="space-y-2.5 font-heading font-medium text-[15px]">
               <li>
-                <Link href="/#services" className="text-[#F6F2E9] hover:text-[#00C7B7] transition-colors">
+                <Link href="/#services" className="text-[#A7A39A] hover:text-[#00C7B7] transition-colors">
                   Software Development
                 </Link>
               </li>
               <li>
-                <Link href="/#services" className="text-[#F6F2E9] hover:text-[#00C7B7] transition-colors">
+                <Link href="/#services" className="text-[#A7A39A] hover:text-[#00C7B7] transition-colors">
                   Workflow Automation
                 </Link>
               </li>
               <li>
-                <Link href="/#services" className="text-[#F6F2E9] hover:text-[#00C7B7] transition-colors">
+                <Link href="/#services" className="text-[#A7A39A] hover:text-[#00C7B7] transition-colors">
                   AI Integration
                 </Link>
               </li>
               <li>
-                <Link href="/#services" className="text-[#F6F2E9] hover:text-[#00C7B7] transition-colors">
+                <Link href="/#services" className="text-[#A7A39A] hover:text-[#00C7B7] transition-colors">
                   Digital Foundations
                 </Link>
               </li>
@@ -59,7 +59,7 @@ export function Footer() {
             <p className="font-mono text-xs uppercase tracking-[0.1em] text-[#00C7B7] font-bold">
               Connect
             </p>
-            <ul className="space-y-2.5 font-heading font-semibold text-base">
+            <ul className="space-y-2.5 font-heading font-medium text-[15px]">
               <li>
                 <a
                   href={`mailto:${SITE.email}`}
@@ -95,7 +95,6 @@ export function Footer() {
         {/* Bottom Bar Separated by 2px Paper Rule */}
         <div className="pt-8 border-t-2 border-[#F6F2E9] flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-xs text-[#A7A39A]">
           <p>© 2026 Axiomata. All rights reserved.</p>
-          <p className="text-[11px] text-[#77766F]">ENG // INDUSTRIAL DIGITAL</p>
         </div>
       </div>
     </footer>

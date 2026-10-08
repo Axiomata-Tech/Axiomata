@@ -22,7 +22,7 @@ export function ServiceCard({ service, className }: ServiceCardProps) {
         {/* Number & Signature Divider Line */}
         <div className="flex items-center justify-between pb-4 border-b-2 border-[#111315]">
           <div className="flex items-center gap-3">
-            <span className="font-mono text-xl sm:text-2xl font-black text-[#111315]">
+            <span className="font-mono text-xl sm:text-2xl font-bold text-[#111315]">
               {service.number}
             </span>
             <span className="h-[2px] w-12 bg-[#111315] group-hover:bg-[#00C7B7] transition-colors" />
@@ -31,13 +31,13 @@ export function ServiceCard({ service, className }: ServiceCardProps) {
         </div>
 
         {/* Title & Subtitle */}
-        <h3 className="font-heading font-black text-2xl sm:text-3xl text-[#111315] uppercase tracking-tight mt-6 mb-2">
+        <h3 className="font-heading font-bold text-2xl sm:text-[26px] text-[#111315] tracking-tight mt-6 mb-2">
           {service.title}
         </h3>
-        <p className="font-heading font-semibold text-base sm:text-lg text-[#00C7B7] mb-4">
+        <p className="font-mono text-xs sm:text-[13px] uppercase tracking-wider font-semibold text-[#00C7B7] mb-4">
           {service.subtitle}
         </p>
-        <p className="text-[#3B4143] text-base leading-relaxed mb-8">
+        <p className="text-[#3B4143] text-base leading-relaxed mb-8 font-normal">
           {service.description}
         </p>
       </div>

@@ -18,11 +18,11 @@ export function Process() {
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-8 border-b-2 border-[#111315]">
             <div className="space-y-3">
               <Eyebrow>EXECUTION MODEL</Eyebrow>
-              <h2 className="text-3xl sm:text-5xl font-heading font-black text-[#111315] uppercase tracking-tight">
+              <h2 className="text-3xl sm:text-5xl font-heading font-extrabold text-[#111315] tracking-tight leading-[1.12]">
                 How We Engineer Solutions
               </h2>
             </div>
-            <p className="text-[#3B4143] text-base sm:text-lg max-w-md">
+            <p className="text-[#3B4143] text-base sm:text-lg max-w-md leading-relaxed font-normal">
               A structured 4-phase methodology ensuring clarity, speed, and software quality from day one.
             </p>
           </div>
@@ -36,7 +36,7 @@ export function Process() {
                 <div>
                   {/* Step Phase Marker */}
                   <div className="flex items-center justify-between pb-4 border-b-2 border-[#111315] mb-6">
-                    <span className="font-mono text-2xl font-black text-[#111315]">
+                    <span className="font-mono text-xl sm:text-2xl font-bold text-[#111315]">
                       {step.number}
                     </span>
                     <span className="font-mono text-xs font-bold text-[#00C7B7] uppercase tracking-wider">
@@ -44,10 +44,10 @@ export function Process() {
                     </span>
                   </div>
 
-                  <h3 className="font-heading font-black text-xl text-[#111315] uppercase mb-3">
+                  <h3 className="font-heading font-bold text-lg sm:text-xl text-[#111315] tracking-tight mb-3">
                     {step.title}
                   </h3>
-                  <p className="text-[#3B4143] text-sm leading-relaxed mb-6">
+                  <p className="text-[#3B4143] text-sm leading-relaxed mb-6 font-normal">
                     {step.description}
                   </p>
                 </div>

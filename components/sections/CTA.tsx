@@ -18,12 +18,12 @@ export function CTA() {
               READY TO BUILD?
             </Eyebrow>
 
-            <h2 className="text-3xl sm:text-5xl lg:text-6xl font-heading font-black text-[#F6F2E9] uppercase tracking-tight leading-tight">
+            <h2 className="text-3xl sm:text-5xl lg:text-6xl font-heading font-extrabold text-[#F6F2E9] tracking-tight leading-[1.12]">
               Have a problem worth solving? <br />
               <span className="text-[#00C7B7]">Let&apos;s build something that works.</span>
             </h2>
 
-            <p className="text-lg sm:text-xl text-[#A7A39A] max-w-xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl text-[#A7A39A] max-w-xl mx-auto leading-relaxed font-normal">
               Tell us about your business goals, software needs, or operational bottlenecks. We&apos;ll respond with a practical technical proposal.
             </p>
 

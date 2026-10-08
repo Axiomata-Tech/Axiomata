@@ -41,7 +41,7 @@ export function Navbar() {
           {/* Logo Wordmark */}
           <Link
             href="/"
-            className="font-heading font-black text-2xl tracking-[0.06em] text-[#111315] select-none hover:opacity-90 flex items-center gap-2"
+            className="font-heading font-extrabold text-2xl tracking-[0.03em] text-[#111315] select-none hover:opacity-90 flex items-center gap-2"
           >
             <span>{SITE.name}</span>
             <span className="w-2 h-2 rounded-full bg-[#00C7B7]" aria-hidden="true" />
@@ -56,7 +56,7 @@ export function Navbar() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="relative font-heading font-semibold text-[16px] text-[#111315] transition-colors hover:text-[#00C7B7] py-1 group"
+                className="relative font-heading font-medium text-[15px] text-[#111315] transition-colors hover:text-[#00C7B7] py-1 group"
               >
                 {item.label}
                 <span className="absolute bottom-0 left-0 w-full h-[2px] bg-[#00C7B7] scale-x-0 group-hover:scale-x-100 transition-transform duration-150 origin-left" />

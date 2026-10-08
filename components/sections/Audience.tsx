@@ -15,11 +15,16 @@ export function Audience() {
       <div className="mx-auto w-full max-w-[1280px] px-5 sm:px-8 lg:px-12 space-y-16">
         {/* Section Header */}
         <Reveal>
-          <div className="space-y-3">
-            <Eyebrow>TARGETED PARTNERSHIPS</Eyebrow>
-            <h2 className="text-3xl sm:text-5xl font-heading font-black text-[#111315] uppercase tracking-tight">
-              Built for Every Operational Stage
-            </h2>
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-8 border-b-2 border-[#111315]">
+            <div className="space-y-3">
+              <Eyebrow>TARGETED PARTNERSHIPS</Eyebrow>
+              <h2 className="text-3xl sm:text-5xl font-heading font-extrabold text-[#111315] tracking-tight leading-[1.12]">
+                Built for Every Operational Stage
+              </h2>
+            </div>
+            <p className="text-[#3B4143] text-base sm:text-lg max-w-md leading-relaxed font-normal">
+              Tailored engineering engagements for businesses from seed-stage prototypes to scaling industrial operations.
+            </p>
           </div>
         </Reveal>
 
@@ -35,10 +40,10 @@ export function Audience() {
                     </span>
                     <span className="w-2 h-2 rounded-full bg-[#00C7B7]" />
                   </div>
-                  <h3 className="font-heading font-black text-2xl text-[#111315] uppercase mb-2">
+                  <h3 className="font-heading font-bold text-xl sm:text-2xl text-[#111315] tracking-tight mb-2">
                     {item.tagline}
                   </h3>
-                  <p className="text-[#3B4143] text-base leading-relaxed mb-6">
+                  <p className="text-[#3B4143] text-base leading-relaxed mb-6 font-normal">
                     {item.description}
                   </p>
                 </div>

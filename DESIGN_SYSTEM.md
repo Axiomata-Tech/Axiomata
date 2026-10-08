@@ -158,20 +158,20 @@ Recommended visual distribution across pages:
 ## 5. Typography
 
 ### Primary Typeface
-- **Primary:** `Manrope` (Headings, Navigation, Body, Buttons, UI)
-- **Alternatives:** `Sora`, `Inter`, `Plus Jakarta Sans`
-
-*Manrope provides a strong balance between technical precision and editorial personality.*
+- **Primary Interface & Editorial:** `Inter` (Headings, Navigation, Body, Buttons, Forms, UI)
+  - Inter provides world-class legibility, optical balancing, high x-height, and zero layout shift (CLS 0.0) when self-hosted via `next/font/google`.
+- **Technical & Metadata:** `Roboto Mono` (Tags, Status indicators, Metric counters, Architecture nodes)
+  - Roboto Mono brings engineering precision without compromising readability.
 
 ### Typography Hierarchy
 
 | Level | Desktop | Mobile | Line Height | Attributes & Usage |
 | :--- | :--- | :--- | :--- | :--- |
-| **Display** | `72px – 112px` | `42px – 60px` | `0.9 – 1.05` | Large statement typography for Hero headlines |
-| **H2** | `48px – 64px` | `36px – 44px` | `1.02 – 1.1` | Section titles |
-| **H3** | `28px – 36px` | `24px – 28px` | `1.15` | Capability / Service headings |
-| **Body** | `16px – 19px` | `16px` | `1.5 – 1.7` | Main paragraph copy (`#3B4143` or `#77766F`) |
-| **Small Labels** | `12px – 14px` | `12px` | `1.2` | Uppercase, `0.08em – 0.14em` letter-spacing. Section numbers, tags, metadata. |
+| **Display / H1** | `48px – 80px` | `38px – 48px` | `1.05 – 1.08` | `Inter`, Extrabold/Bold, Natural title/sentence case, tight tracking (`-0.02em`) |
+| **H2** | `36px – 48px` | `28px – 36px` | `1.12 – 1.15` | `Inter`, Extrabold/Bold, Section titles, consistent rhythm |
+| **H3** | `20px – 28px` | `18px – 22px` | `1.2` | `Inter`, Bold, Service & case study headings |
+| **Body** | `16px – 18px` | `15px – 16px` | `1.6` | `Inter`, Regular (`#3B4143`), high contrast against Warm Ivory |
+| **Technical Meta** | `11px – 13px` | `11px – 12px` | `1.2` | `Roboto Mono`, Medium/Bold, uppercase, `0.1em` letter-spacing |
 
 ---
 

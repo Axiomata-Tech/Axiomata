@@ -17,10 +17,10 @@ export function About() {
             {/* Left Statement */}
             <div className="lg:col-span-6 space-y-6">
               <Eyebrow>ABOUT AXIOMATA</Eyebrow>
-              <h2 className="text-3xl sm:text-5xl font-heading font-black text-[#111315] uppercase tracking-tight leading-tight">
+              <h2 className="text-3xl sm:text-5xl font-heading font-extrabold text-[#111315] tracking-tight leading-[1.12]">
                 Practical engineering for the businesses that need it most.
               </h2>
-              <p className="text-lg text-[#3B4143] leading-relaxed">
+              <p className="text-lg text-[#3B4143] leading-relaxed font-normal">
                 Axiomata exists to make technology more useful. We bridge the gap between complex software engineering and everyday business operations — building systems that are clean, maintainable, and built for growth.
               </p>
             </div>
@@ -29,7 +29,7 @@ export function About() {
             <div className="lg:col-span-6 bg-[#FFFFFF] border-2 border-[#111315] p-6 sm:p-10 space-y-6 rounded-[2px]">
               <div className="grid grid-cols-2 gap-6 pb-6 border-b border-[#E2DDD3]">
                 <div>
-                  <span className="font-heading font-black text-3xl sm:text-4xl text-[#111315] block">
+                  <span className="font-heading font-bold text-3xl sm:text-4xl text-[#111315] block">
                     100%
                   </span>
                   <span className="font-mono text-xs text-[#77766F] uppercase tracking-wider block mt-1">
@@ -37,7 +37,7 @@ export function About() {
                   </span>
                 </div>
                 <div>
-                  <span className="font-heading font-black text-3xl sm:text-4xl text-[#00C7B7] block">
+                  <span className="font-heading font-bold text-3xl sm:text-4xl text-[#00C7B7] block">
                     &lt;50ms
                   </span>
                   <span className="font-mono text-xs text-[#77766F] uppercase tracking-wider block mt-1">

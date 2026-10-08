@@ -44,13 +44,13 @@ export function ProjectCard({
         {/* Project Title */}
         <h3
           className={cn(
-            "font-heading font-black text-[#111315] tracking-tight uppercase group-hover:text-[#00C7B7] transition-colors mb-2",
-            isFeatured ? "text-2xl sm:text-4xl" : "text-xl sm:text-2xl"
+            "font-heading font-bold text-[#111315] tracking-tight group-hover:text-[#00C7B7] transition-colors mb-1.5",
+            isFeatured ? "text-2xl sm:text-3xl" : "text-xl sm:text-2xl"
           )}
         >
           {project.name}
         </h3>
-        <p className="font-mono text-xs text-[#77766F] uppercase tracking-wider mb-6">
+        <p className="font-mono text-xs text-[#77766F] tracking-wide mb-5">
           Client: {project.clientType}
         </p>
 

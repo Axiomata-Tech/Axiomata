@@ -2,9 +2,9 @@
 
 This document records sensible decisions made during the build where the specification allowed engineer discretion.
 
-### 1. Font Loading & Fallbacks
-- **Implementation:** Configured `next/font/google` with `display: 'swap'` and CSS variables (`--font-space-grotesk`, `--font-inter`, `--font-space-mono`).
-- **Rationale:** Ensures zero layout shift (CLS: 0), optimal font rendering performance, and consistent typography across desktop and mobile.
+### 1. Font Loading & Typography System
+- **Implementation:** Configured `next/font/google` with `display: 'swap'` utilizing **Inter** for all UI, headings, copy, and forms, alongside **Roboto Mono** for technical metadata and architecture diagrams.
+- **Rationale:** Ensures zero Cumulative Layout Shift (CLS: 0.0), instant locally hosted font delivery without external network requests (Core Web Vitals & SEO optimized), crisp legibility at all font sizes, and eliminates squashed all-caps shouting for superior reading comprehension.
 
 ### 2. Micro-Interaction System
 - **Implementation:** Integrated strict 150ms step-free transitions for button and card hover/active states (`transform: translate(-3px, -3px)` and expanding hard shadows).
